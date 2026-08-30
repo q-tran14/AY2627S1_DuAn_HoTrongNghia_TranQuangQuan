@@ -50,6 +50,55 @@ There are five ways to use SPMF, depending on your needs:
 
 ---
 
+### Build and run this source checkout on Windows
+
+This repository contains source code rather than a pre-built `spmf.jar`. The
+course environment uses JDK 25 and does not require Maven, Gradle, or external
+Java libraries.
+
+1. Verify that JDK 25 is available:
+
+   ```powershell
+   java -version
+   javac -version
+   ```
+
+2. Build all Java source files from the repository root:
+
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File .\scripts\build.ps1
+   ```
+
+   SPMF source files contain comments written with mixed legacy encodings. The
+   script therefore compiles using `ISO-8859-1`; this preserves the source bytes
+   and does not affect the Java algorithm logic.
+
+3. Launch the graphical user interface:
+
+   ```powershell
+   java -cp "build\classes;." ca.pfv.spmf.gui.Main
+   ```
+
+   The `.` classpath entry lets the GUI load icons kept alongside the source.
+
+4. To run the baseline for this project from the GUI, click **Select**, search
+   for `Scented`, and select **ScentedUtilityMiner**. Use:
+
+   ```text
+   Input:  ca\pfv\spmf\test\DB_Utility.txt
+   Output: results\scented-output.txt
+   Minimum utility: 30
+   Max. Reinduction count: 10
+   ```
+
+   The sample run produces 8 high-utility itemsets. Its output is a local,
+   reproducible experiment artifact and is intentionally not versioned.
+
+The `build/` and `results/` directories are generated locally and ignored by
+Git.
+
+---
+
 ### 1 — Graphical User Interface (GUI)
 
 <div align="center">

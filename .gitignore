@@ -1,2 +1,6 @@
 ca/pfv/spmf/algorithms/frequentpatterns/hybrid/UPG_FHM.PDF
 ca/pfv/spmf/algorithms/frequentpatterns/hybrid/UPG_FHM.PDF
+
+# Generated local build artifacts and experiment outputs
+/build/
+/results/
