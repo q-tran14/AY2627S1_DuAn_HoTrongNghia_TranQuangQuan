@@ -1,6 +1,6 @@
 package experiments;
 
-import ca.pfv.spmf.algorithms.frequentpatterns.rminer_sminer.AlgoScentedUtilityMiner;
+import algorithms.AlgoScentedUtilityMiner;
 import java.io.IOException;
 import java.util.concurrent.*;
 
@@ -14,7 +14,7 @@ public class MainTestEx1 {
         int maxReinductionCount = 10;
         
         // --- DEADLINE CONFIGURATION (IN SECONDS) ---
-        long timeLimitInSeconds = 30; 
+        long timeLimitInSeconds = 20; 
         
         if (args.length >= 4) {
             input = args[0];
@@ -83,7 +83,7 @@ public class MainTestEx1 {
             System.out.println("\n--- STATISTICS (PARTIAL EXECUTION) ---");
             
             // DÒNG THÊM MỚI: Lấy bộ nhớ tối đa đã ghi nhận được tính đến lúc bị ngắt
-            algorithm.totalMemory = ca.pfv.spmf.tools.MemoryLogger.getInstance().getMaxMemory();
+            algorithm.totalMemory = tools.MemoryLogger.getInstance().getMaxMemory();
             
             // Call printStats() to output results obtained up to the point of interruption
             algorithm.printStats();

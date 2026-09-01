@@ -3,8 +3,8 @@ setlocal enabledelayedexpansion
 
 echo [1/2] Compiling Java source files...
 :: Compile core source code
-javac ca\pfv\spmf\tools\MemoryLogger.java
-javac ca\pfv\spmf\algorithms\frequentpatterns\rminer_sminer\*.java
+javac tools\MemoryLogger.java
+javac algorithms\*.java
 
 :: Compile experimental execution file (Updated to MainTestEx1)
 javac -cp . experiments\MainTestEx1.java

@@ -20,7 +20,6 @@ import java.net.URL;
 * SPMF. If not, see <http://www.gnu.org/licenses/>.
 */
 
-import algorithms.AlgoRMiner;
 
 /**
  * Example of how to use the AlgoRMiner algorithm 
