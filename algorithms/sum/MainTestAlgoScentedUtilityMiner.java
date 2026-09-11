@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.sum;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

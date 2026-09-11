@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.sum;
 
 import java.util.HashMap;
 import java.util.HashSet;

@@ -1,0 +1,89 @@
+Folder PATH listing
+Volume serial number is BE68-A4E0
+C:.
+¦   output
+¦   output.txt
+¦   README.md
+¦   run.bat
+¦   tree.txt
+¦   
++---algorithms
+¦   +---fhmds
+¦   ¦   +---ds
+¦   ¦   ¦       AlgoFHM_DS.java
+¦   ¦   ¦       Batch.java
+¦   ¦   ¦       Batch_wise_TWU.java
+¦   ¦   ¦       Element.java
+¦   ¦   ¦       FMAP_TWU.java
+¦   ¦   ¦       Itemset.java
+¦   ¦   ¦       UtilityList.java
+¦   ¦   ¦       
+¦   ¦   +---naive
+¦   ¦           AlgoFHMDS_Naive.java
+¦   ¦           Batch.java
+¦   ¦           Element.java
+¦   ¦           Itemset.java
+¦   ¦           UtilityList.java
+¦   ¦           
+¦   +---hui_miner
+¦   ¦       AlgoHUIMiner.java
+¦   ¦       UtilityList.java
+¦   ¦       
+¦   +---sum
+¦   ¦       AlgoRMiner.class
+¦   ¦       AlgoRMiner.java
+¦   ¦       AlgoScentedUtilityMiner$1.class
+¦   ¦       AlgoScentedUtilityMiner.class
+¦   ¦       AlgoScentedUtilityMiner.java
+¦   ¦       MainTestAlgoScentedUtilityMiner.class
+¦   ¦       MainTestAlgoScentedUtilityMiner.java
+¦   ¦       MainTestRMiner.class
+¦   ¦       MainTestRMiner.java
+¦   ¦       ResidueMap.class
+¦   ¦       ResidueMap.java
+¦   ¦       
+¦   +---ulb
+¦   ¦       AlgoULBMiner.java
+¦   ¦       Element.java
+¦   ¦       UtilityListBuffer.java
+¦   ¦       
+¦   +---upgrowth_ihup
+¦           AlgoUPGrowth.java
+¦           
++---datasets
+¦       accidents_utility_spmf.txt
+¦       chess.txt
+¦       connect_utility_spmf.txt
+¦       DB_Utility.txt
+¦       foodmart.txt
+¦       mushroom_utility_SPMF.txt
+¦       
++---datastructures
+¦   +---collections
+¦       +---comparators
+¦       ¦       ComparatorInt.java
+¦       ¦       ComparatorObject.java
+¦       ¦       
+¦       +---list
+¦       ¦       ArrayListInt.java
+¦       ¦       ArrayListObject.java
+¦       ¦       ListInt.java
+¦       ¦       ListObject.java
+¦       ¦       
+¦       +---map
+¦               LMapIntToInt.java
+¦               LMapIntToLong.java
+¦               LMapIntToObject.java
+¦               MapIntToInt.java
+¦               MapIntToLong.java
+¦               MapIntToObject.java
+¦               
++---experiments
+¦       MainTestEx1$1.class
+¦       MainTestEx1.class
+¦       MainTestEx1.java
+¦       
++---tools
+        MemoryLogger.class
+        MemoryLogger.java
+        
