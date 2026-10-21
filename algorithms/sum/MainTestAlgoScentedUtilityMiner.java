@@ -3,6 +3,8 @@ package algorithms.sum;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 /**
  * Example of how to use the AlgoScentedUtilityMiner algorithm 
@@ -21,16 +23,35 @@ public class MainTestAlgoScentedUtilityMiner {
     public static void main(String[] args) throws IOException {
         
         // Path to the input file (change the filename as needed)
-        String input = fileToPath("DB_Utility.txt");
+        if (args.length != 0 && args.length != 4) {
+            throw new IllegalArgumentException(
+                    "Usage: MainTestAlgoScentedUtilityMiner [input output minUtility maxR]");
+        }
+        String input = args.length == 4 ? args[0] : "datasets/DB_Utility.txt";
         
         // Path to the output file where results will be written
-        String output = ".//output.txt";
+        String output = args.length == 4 ? args[1] : "results/local/sum-example.txt";
         
         // Uncomment and use the following line if you want to set a different utility threshold
-         int minUtility = 30;  
+         long minUtility = args.length == 4 ? Long.parseLong(args[2]) : 30;
         
         // Maximum reinduction count (set as needed)
-        int maxReinductionCount = 10; 
+        int maxReinductionCount = args.length == 4 ? Integer.parseInt(args[3]) : 10;
+        if (minUtility <= 0 || maxReinductionCount < 0) {
+            throw new IllegalArgumentException("minUtility must be positive and maxR nonnegative");
+        }
+        Path inputPath = Path.of(input).toAbsolutePath().normalize();
+        Path outputPath = Path.of(output).toAbsolutePath().normalize();
+        if (!Files.isRegularFile(inputPath)) {
+            throw new IOException("Input file not found: " + inputPath);
+        }
+        if (inputPath.equals(outputPath)
+                || (Files.exists(outputPath) && Files.isSameFile(inputPath, outputPath))) {
+            throw new IllegalArgumentException("Input and output must be different files");
+        }
+        Files.createDirectories(outputPath.getParent());
+        System.out.println("Input: " + inputPath);
+        System.out.println("Output: " + outputPath);
         
         
         // Create an instance of AlgoScentedUtilityMiner
@@ -38,6 +59,9 @@ public class MainTestAlgoScentedUtilityMiner {
         
         // Run the algorithm with the specified input, output, and minimum utility
         algorithm.runAlgorithm(input, output, minUtility, maxReinductionCount);
+        if (algorithm.endTimestamp == 0) {
+            throw new IOException("SUM did not finish successfully; see the error above");
+        }
         algorithm.printStats();
     }
 
