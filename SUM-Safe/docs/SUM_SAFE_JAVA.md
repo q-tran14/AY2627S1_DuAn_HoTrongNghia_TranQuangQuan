@@ -6,7 +6,7 @@ SUM-Safe là tên làm việc cho bản cài đặt thử nghiệm riêng, khôn
 
 ## Chạy demo trực tiếp
 
-Chạy tại thư mục midterm, dùng CMD hoặc PowerShell:
+Chạy tại thư mục SUM-Safe, dùng CMD hoặc PowerShell:
 
 ```powershell
 .\run.cmd demo
@@ -23,7 +23,7 @@ Kết quả đã chạy:
 - SUM chính thức: 0 HUI, 0 phép ghép.
 - SUM-Safe: `1 2 3 #UTIL: 12`, khớp vét cạn.
 - Demo dùng source SPMF đã đặt trong vendor/spmf, không cần tải mạng hoặc tmp.
-- Ở thư mục gốc, dùng `.\midterm\run.cmd demo`.
+- Ở thư mục gốc, dùng `.\SUM-Safe\run.cmd demo`.
 
 Kiểm tra bản Java mới:
 

@@ -9,7 +9,7 @@ import java.util.zip.*;
 /** Ordinary ZIP of the submission files; excludes builds, personal logs and .git. */
 public final class PackageSubmission {
     private static void entry(ZipOutputStream zip, String name, byte[] data) throws Exception {
-        ZipEntry item = new ZipEntry("midterm/" + name);
+        ZipEntry item = new ZipEntry("SUM-Safe/" + name);
         zip.putNextEntry(item);
         zip.write(data);
         zip.closeEntry();
@@ -37,7 +37,7 @@ public final class PackageSubmission {
             files.put(file, root.resolve(file));
         }
         Files.createDirectories(root.resolve("dist"));
-        Path archive = root.resolve("dist/SUM_midterm.zip");
+        Path archive = root.resolve("dist/SUM-Safe.zip");
         try (ZipOutputStream zip = new ZipOutputStream(Files.newOutputStream(archive))) {
             for (Map.Entry<String, Path> file : files.entrySet()) {
                 byte[] data = Files.readAllBytes(file.getValue());

@@ -1,6 +1,6 @@
 # Cập nhật giữ trạng thái và ngưỡng động của SUM-Safe
 
-Cập nhật ngày 23/10/2026. Bổ sung vào bản Java trong midterm; source SPMF gốc vẫn được giữ nguyên để đối chiếu.
+Cập nhật ngày 23/10/2026. Bổ sung vào bản Java trong SUM-Safe; source SPMF gốc vẫn được giữ nguyên để đối chiếu.
 
 ## Chạy ngay bằng CMD
 

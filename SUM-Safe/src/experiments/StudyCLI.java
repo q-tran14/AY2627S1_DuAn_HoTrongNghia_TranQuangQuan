@@ -97,7 +97,7 @@ public final class StudyCLI {
                 System.out.println("run.cmd incremental fixed|paper outputDir initialMin maxR [--pruning true|false] batch1 [batch2 ...]");
                 System.out.println("run.cmd run safe input output minUtility maxR [true|false]");
                 System.out.println("run.cmd run original input output minUtility maxR");
-                System.out.println("Paths are relative to the midterm folder, unless absolute.");
+                System.out.println("Paths are relative to the folder containing run.cmd, unless absolute.");
                 System.out.println("minUtility/initialMin: positive integer; maxR: nonnegative integer.");
                 System.out.println("RU pruning defaults to true. Each incremental file contains NEW transactions only.");
                 System.out.println("See README.md for parameters and examples; --help and -h also display this help.");

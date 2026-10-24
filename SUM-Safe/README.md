@@ -1,4 +1,4 @@
-# Bộ chương trình giữa kỳ: kiểm chứng SUM và bản thử nghiệm SUM-Safe
+# SUM-Safe — kiểm chứng SUM và khai phá HUI
 
 Đề tài: **Research and Development of Solutions for Mining High-Utility Itemsets from Incremental Datasets**.
 
@@ -12,7 +12,7 @@ Giải nén ZIP trước khi chạy. Cần **JDK 25**, không chỉ JRE. Không 
 
 **Cách mở CMD đúng thư mục sau khi giải nén:**
 
-1. Mở thư mục `midterm` bằng File Explorer. Đây là thư mục có file `run.cmd` và `README.md` này.
+1. Mở thư mục `SUM-Safe` bằng File Explorer. Đây là thư mục có file `run.cmd` và `README.md` này.
 2. Nhấn vào thanh địa chỉ của File Explorer, nhập `cmd` rồi nhấn Enter.
 3. Trong cửa sổ CMD vừa mở, chạy:
 
@@ -61,7 +61,7 @@ Thiết lập set chỉ áp dụng trong cửa sổ CMD hiện tại. Vị trí 
 | run.cmd run safe datasets/DB_Utility.txt results/local/safe.txt 30 10 | Chạy bản sửa |
 | run.cmd run safe datasets/DB_Utility.txt results/local/no-prune.txt 30 10 false | Bản sửa, tắt quyết định cắt RU |
 | run.cmd run original datasets/DB_Utility.txt results/local/original.txt 30 10 | Chạy source SPMF chính thức |
-| run.cmd pack | Tạo một file ZIP thông thường: dist/SUM_midterm.zip |
+| run.cmd pack | Tạo một file ZIP thông thường: dist/SUM-Safe.zip |
 
 Trong PowerShell thêm `.\` trước `run.cmd`. Nếu tên input/output có dấu cách, đặt trong dấu nháy kép. Các tham số run lần lượt là phiên bản, input, output, minUtility, maxR và tùy chọn cắt RU của bản safe.
 
@@ -109,7 +109,7 @@ Phân tích số liệu pilot đã lưu (Python 3, không cần cài thư viện
 python scripts/analyze_results.py --output-dir results/local/analysis
 ```
 
-Đây là phân tích lại CSV lịch sử, không phải chạy benchmark mới. `--output-dir` nhận đường dẫn tương đối tính từ midterm hoặc đường dẫn tuyệt đối.
+Đây là phân tích lại CSV lịch sử, không phải chạy benchmark mới. `--output-dir` nhận đường dẫn tương đối tính từ SUM-Safe hoặc đường dẫn tuyệt đối.
 
 Giới hạn tùy chỉnh hiện tại: heap 512 MB được đặt trong `run.cmd`; seed và số database của bộ kiểm chứng được đặt trong source test. Script pilot hiện cố định prefix 200 giao dịch, top 12 item, ngưỡng 5% và ba lượt đo; các giá trị này chưa được đưa thành option CLI. Kích thước mỗi batch do bạn chuẩn bị trong các file đầu vào.
 
@@ -135,7 +135,7 @@ Check còn kiểm tra riêng API giữ trạng thái: 7.036 snapshot từ 500 ch
 ## Cấu trúc
 
 ```text
-midterm/
+SUM-Safe/
   run.cmd                 Điểm chạy chung cho CMD / PowerShell
   sources.txt             Danh sách source cần biên dịch
   src/                    SUM local, SUM-Safe, oracle, runner và demo
@@ -151,7 +151,7 @@ midterm/
   dist/                   ZIP tạo bằng lệnh pack
 ```
 
-Sau khi có kết quả mới, chỉ chọn bằng chứng muốn nộp và chép vào evidence với ngày, cấu hình tương ứng, rồi chạy pack. Pack đóng gói theo danh sách cho phép; không lấy file cá nhân, .git, build hay log chưa chọn trong results/local. ZIP chứa đầy đủ source chính thức dùng demo, không phụ thuộc tmp hoặc thư mục bên ngoài. Thư mục report là tùy chọn đối với lệnh pack. Báo cáo đang chỉnh trực tiếp ở project LaTeX riêng; trước khi nộp, chép bản nguồn và PDF mới vào report hoặc gửi kèm báo cáo riêng theo yêu cầu thầy. Pack không tự lấy báo cáo từ ngoài midterm.
+Sau khi có kết quả mới, chỉ chọn bằng chứng muốn nộp và chép vào evidence với ngày, cấu hình tương ứng, rồi chạy pack. Pack đóng gói theo danh sách cho phép; không lấy file cá nhân, .git, build hay log chưa chọn trong results/local. ZIP chứa đầy đủ source chính thức dùng demo, không phụ thuộc tmp hoặc thư mục bên ngoài. Thư mục report là tùy chọn đối với lệnh pack. Báo cáo đang chỉnh trực tiếp ở project LaTeX riêng; trước khi nộp, chép bản nguồn và PDF mới vào report hoặc gửi kèm báo cáo riêng theo yêu cầu thầy. Pack không tự lấy báo cáo từ ngoài SUM-Safe.
 
 ## Báo cáo và nguồn
 

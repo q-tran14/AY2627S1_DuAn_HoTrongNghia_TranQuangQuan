@@ -1,7 +1,9 @@
 **/*.class
 **/__pycache__/
 **/*.pyc
-/midterm/build/
-/midterm/results/local/
-/midterm/dist/
+/SUM-Safe/build/
+/SUM-Safe/results/local/
+/SUM-Safe/dist/
 /archive/
+
+/reference/

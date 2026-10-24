@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "evidence/2026-10-21/safe-pilot/runs.csv"
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--output-dir", type=Path, default=ROOT / "results/local/analysis",
-                    help="Output folder; relative paths are resolved from the midterm folder")
+                    help="Output folder; relative paths are resolved from the project folder")
 options = parser.parse_args()
 OUT = options.output_dir
 if not OUT.is_absolute():
