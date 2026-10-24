@@ -1,0 +1,6 @@
+Input: 1 2 3:12:4 4 4
+minUtility=10, maxR=10
+Expected: {[1, 2, 3]=12}
+Official SUM: {}
+SUM-Safe: {[1, 2, 3]=12}
+SUM-Safe matches: true

@@ -1,0 +1,15 @@
+src/algorithms/sum/AlgoScentedUtilityMiner.java
+src/algorithms/sum/ResidueMap.java
+src/algorithms/sum/AlgoSUMSafe.java
+src/tools/MemoryLogger.java
+src/experiments/CheckSumCorrectness.java
+src/experiments/CheckSUMSafe.java
+src/experiments/RunSUMSafe.java
+src/experiments/RunOfficialSum.java
+src/experiments/StudyCLI.java
+src/experiments/PackageSubmission.java
+src/experiments/RunIncrementalSUMSafe.java
+src/experiments/CheckIncrementalSUMSafe.java
+vendor/spmf/ca/pfv/spmf/algorithms/frequentpatterns/rminer_sminer/AlgoScentedUtilityMiner.java
+vendor/spmf/ca/pfv/spmf/algorithms/frequentpatterns/rminer_sminer/ResidueMap.java
+vendor/spmf/ca/pfv/spmf/tools/MemoryLogger.java

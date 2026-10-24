@@ -1,0 +1,7 @@
+PASS: 7036 retained-state snapshots across fixed/paper and RU off/on.
+500 random multi-batch sequences + 4 fixed sequences; seed=20261023.
+Every snapshot matches exhaustive oracle AND cold-start mining at the same threshold.
+Batch input deleted after append; mine succeeds without reopening prior input.
+Threshold checked from independent cumulative singleton totals.
+Empty updates, expiry/reinduction, new items, repeat mine, malformed append, pending update, overflow and reset checked.
+In-memory state within one Java process; mining projections are rebuilt each query.

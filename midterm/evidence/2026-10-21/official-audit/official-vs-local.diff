@@ -1,0 +1,29 @@
+--- official
++++ local
+@@ -1,4 +1,4 @@
+-package ca.pfv.spmf.algorithms.frequentpatterns.rminer_sminer;
++package algorithms.sum;
+ 
+ import java.io.BufferedReader;
+ import java.io.BufferedWriter;
+@@ -20,7 +20,7 @@
+ import java.util.Map.Entry;
+ import java.util.Set;
+ 
+-import ca.pfv.spmf.tools.MemoryLogger;
++import tools.MemoryLogger;
+ 
+ /* This file is copyright (c) Pushp Sra et al.
+ * 
+@@ -144,11 +144,6 @@
+ 		startTimestamp = System.currentTimeMillis();
+ 		MemoryLogger.getInstance().reset();
+ 		writer = new BufferedWriter(new FileWriter(output));
+-		writer.write("@FILETYPE=\"High-utility itemsets\"");
+-		writer.newLine();
+-		writer.write("@SOURCE=\"SPMF SOFTWARE https://philippe-fournier-viger.com/spmf/\"");
+-		writer.newLine();
+-		
+ 		BufferedReader myInput = null;
+ 		int tid = 0;
+ 		String thisLine;

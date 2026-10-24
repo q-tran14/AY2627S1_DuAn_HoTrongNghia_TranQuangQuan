@@ -1,0 +1,2 @@
+SUM-Safe (experimental), RU pruning=true
+HUI=9 joins=40 nodes=11 pruned=2 load_ms=5.762 prepare_ms=0.697 mine_ms=3.013

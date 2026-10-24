@@ -1,3 +1,7 @@
-/build/
-/results/local/
-/tmp/
+**/*.class
+**/__pycache__/
+**/*.pyc
+/midterm/build/
+/midterm/results/local/
+/midterm/dist/
+/archive/

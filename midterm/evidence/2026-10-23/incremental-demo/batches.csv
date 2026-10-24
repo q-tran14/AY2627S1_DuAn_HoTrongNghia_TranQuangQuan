@@ -1,0 +1,4 @@
+batch,input,new_transactions,total_transactions,minUtility,minimum_singleton_utility,HUI,joins,update_ms,prepare_ms,mine_ms
+1,"datasets/incremental/batch-01.txt",1,1,10,4,1,3,2.537,0.666,1.423
+2,"datasets/incremental/batch-02.txt",1,2,14,6,1,3,0.371,0.025,0.228
+3,"datasets/incremental/batch-03.txt",1,3,20,8,1,3,0.228,0.036,0.250

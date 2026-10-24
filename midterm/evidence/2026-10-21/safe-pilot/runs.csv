@@ -1,0 +1,13 @@
+dataset,pruning,repeat,HUI,joins,nodes,pruned,load_ms,prepare_ms,mine_ms
+foodmart,true,3,9,40,11,2,5.626,0.662,2.847
+foodmart,false,3,9,44,11,0,5.648,0.675,2.899
+foodmart,false,2,9,44,11,0,6.034,0.659,2.888
+foodmart,false,1,9,44,11,0,5.752,0.692,2.897
+foodmart,true,1,9,40,11,2,6.980,0.793,3.366
+foodmart,true,2,9,40,11,2,5.762,0.697,3.013
+mushroom,true,3,4091,4083,4095,0,14.013,2.213,42.403
+mushroom,false,3,4091,4083,4095,0,13.162,1.743,44.236
+mushroom,false,2,4091,4083,4095,0,13.590,2.039,42.550
+mushroom,false,1,4091,4083,4095,0,13.819,2.288,48.226
+mushroom,true,1,4091,4083,4095,0,13.628,1.988,42.825
+mushroom,true,2,4091,4083,4095,0,13.189,2.524,42.986

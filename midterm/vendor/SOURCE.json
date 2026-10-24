@@ -1,0 +1,19 @@
+{
+  "download_date": "2026-10-20",
+  "source_url": "https://www.philippe-fournier-viger.com/spmf/spmf.zip",
+  "zip_sha256": "48599087a24bd43fc1f32dac05cd2390f3895da437e092a7c0b7e6c7426a9c10",
+  "files": [
+    {
+      "path": "vendor/spmf/ca/pfv/spmf/algorithms/frequentpatterns/rminer_sminer/AlgoScentedUtilityMiner.java",
+      "sha256": "61232de221d742713f821096208544a6b52864f7f59e53abf8efe5752115b8db"
+    },
+    {
+      "path": "vendor/spmf/ca/pfv/spmf/algorithms/frequentpatterns/rminer_sminer/ResidueMap.java",
+      "sha256": "8d87bf9407651252bf6fa13e9e8fee675f0dca412edc8e63b3fdd601ddbb4615"
+    },
+    {
+      "path": "vendor/spmf/ca/pfv/spmf/tools/MemoryLogger.java",
+      "sha256": "9b24e47725fa17bcef85dec02e6da10242670a3ea929b21796b9503b1861aec2"
+    }
+  ]
+}

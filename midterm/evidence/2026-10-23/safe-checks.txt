@@ -1,0 +1,5 @@
+PASS: 9 fixed cases + 2759 prefixes from 500 random databases.
+Both RU on/off match exhaustive oracle (itemsets AND utility).
+Same miner instance reused across calls; invalid inputs rejected: 5.
+Seed=20261021. RC>=0; nonnegative full-history utility.
+Prefix tests rerun batches; they do NOT verify a persistent incremental API.

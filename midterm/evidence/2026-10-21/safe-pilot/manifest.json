@@ -1,0 +1,50 @@
+[
+  {
+    "dataset": "foodmart",
+    "source_sha256": "0e77ec1b913f6ace0905dac16811bfe2c78e13c32d07647d316e593042d970e6",
+    "first_transactions": 200,
+    "retained_transactions": 38,
+    "selected_items": [
+      27,
+      54,
+      110,
+      128,
+      157,
+      235,
+      258,
+      340,
+      398,
+      705,
+      778,
+      1368
+    ],
+    "minUtility": 1276,
+    "maxR": 100000,
+    "expected_huis": 9,
+    "input_sha256": "d48523af1b2114355897573561926c4eb8d666d42a0d7d52d6fd7ed13094c8da"
+  },
+  {
+    "dataset": "mushroom",
+    "source_sha256": "5ba539a025fb67a6268f48e041d27481e4914dbd97a65e9a89a899cae86b9f04",
+    "first_transactions": 200,
+    "retained_transactions": 200,
+    "selected_items": [
+      2,
+      34,
+      36,
+      52,
+      59,
+      63,
+      67,
+      76,
+      85,
+      86,
+      90,
+      93
+    ],
+    "minUtility": 1810,
+    "maxR": 100000,
+    "expected_huis": 4091,
+    "input_sha256": "061abbda67036666dd9be8773bdd66bebbb63e7f939240f86e5c73896e2b7455"
+  }
+]

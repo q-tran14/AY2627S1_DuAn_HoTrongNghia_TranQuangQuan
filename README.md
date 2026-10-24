@@ -1,33 +1,39 @@
-# AY2627S1_DuAn_HoTrongNghia_TranQuangQuan
+# Khai phá tập mục lợi ích cao – chương trình giữa kỳ
 
-## Run SUM locally (PowerShell)
+Đề tài: Research and Development of Solutions for Mining High-Utility Itemsets from Incremental Datasets.
 
-```powershell
-./scripts/run-sum.ps1
-./scripts/run-sum.ps1 -Check
+**Thư mục đang làm và chuẩn bị nộp: [midterm](midterm/README.md).**
+
+Mở thư mục `midterm` bằng File Explorer, nhập `cmd` vào thanh địa chỉ rồi nhấn Enter. Cửa sổ CMD sẽ mở ngay tại thư mục đó. Chạy:
+
+```bat
+run.cmd demo
+run.cmd check
+run.cmd incremental-demo
+run.cmd pack
 ```
 
-The first command compiles the SUM target and runs the small example (8 HUIs).
-
-Experimental Java correction (original mining class unchanged):
+Nếu dùng PowerShell, mở terminal tại thư mục `midterm` rồi chạy:
 
 ```powershell
-./scripts/run-sum.ps1 -Safe -Check
-./scripts/demo-counterexample.ps1 -Official -CompareSafe
+.\run.cmd demo
+.\run.cmd check
+.\run.cmd incremental-demo
+.\run.cmd pack
 ```
 
-See [SUM-Safe implementation and verified results](docs/SUM_SAFE_JAVA.md).
-The official demo requires the previously downloaded audit source in `tmp/audit/official`;
-omit `-Official` to compare with the local original miner.
-The second compares outputs with an exhaustive oracle; it currently exits with
-failure because three small cases expose mismatches in the existing miner.
-See [Vietnamese source walkthrough](docs/CHAY_VA_DOC_SOURCE.md) for commands,
-code flow, input format, and the reproducible findings. Other incomplete algorithm
-packages are not included in this SUM build. Generated files go to `build/` and
-`results/local/`.
+Có thể đặt hoặc giải nén dự án ở bất kỳ ổ đĩa nào. run.cmd tự xác định thư mục chứa nó; các đường dẫn dữ liệu tương đối được tính từ thư mục midterm.
 
+Cần JDK 25. Lệnh .cmd gọi Java trực tiếp, không cần Set-ExecutionPolicy. ZIP tạo tại midterm/dist/SUM_midterm.zip; chỉ gửi gói này khi đã bổ sung báo cáo theo yêu cầu thầy.
 
+| Thư mục | Vai trò |
+|---|---|
+| midterm/ | Code, source gốc, dataset dùng, tài liệu và bằng chứng; chạy độc lập |
+| reference/ | Thuật toán HUIM/dataset khác và ghi chú lịch sử, để tham khảo tiếp |
+| archive/ | Bản khôi phục cấu trúc cũ trước khi dọn; không gửi trong gói nộp |
 
-# References:
-- Sra, P., Chand, S. A Reinduction-Based Approach for Efficient High Utility Itemset Mining from Incremental Datasets. Data Sci. Eng. 9, 73–87 (2024). https://doi.org/10.1007/s41019-023-00229-4
-- https://www.philippe-fournier-viger.com/spmf/ScentedMiner_utility.php
+Build, .class, tmp và bảng/biểu đồ cũ không thuộc kết quả kiểm chứng hiện tại đã được dọn khỏi cây đang làm. Các bảng/biểu đồ và script cũ được giữ trong bản khôi phục; không dùng làm số liệu mới của SUM-Safe.
+
+Ghi chú báo cáo: [REPORT_GUIDE.md](midterm/docs/REPORT_GUIDE.md). Thay đổi chương trình và kết quả: [SUM_SAFE_JAVA.md](midterm/docs/SUM_SAFE_JAVA.md).
+
+Đã có API giữ trạng thái qua batch và policy ngưỡng động trong một phiên RAM. Hướng dẫn chạy: [INCREMENTAL_API.md](midterm/docs/INCREMENTAL_API.md).
